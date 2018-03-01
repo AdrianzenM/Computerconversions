@@ -9,22 +9,22 @@ import android.widget.TextView;
 import android.content.Intent;
 
 
-public class MainActivity extends AppCompatActivity implements View.onClickListener {
+public class MainActivity extends AppCompatActivity{
 
     static Button convert;
     static EditText input;
     static TextView output;
     static Button hexcon;
-    private Button button;
+    static Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        convert = (Button) findViewById(R.id.Converter);
         input = (EditText) findViewById(R.id.DoubleV);
         output = (TextView) findViewById(R.id.OUTPUT);
+        hexcon = (Button) findViewById(R.id.hex);
         button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener( new View.OnClickListener() {
