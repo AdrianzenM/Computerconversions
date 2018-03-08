@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue"
+    android:background="@drawable/binarytunnel"
     tools:context="com.example.manuel.computerconversions.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
@@ -48,6 +48,7 @@
 
     <Button
         android:id="@+id/Converter"
+        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="116dp"
         android:layout_height="72dp"
         android:layout_marginBottom="8dp"
@@ -81,8 +82,8 @@
     <Button
         android:id="@+id/button"
         style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
-        android:layout_width="28dp"
-        android:layout_height="24dp"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
