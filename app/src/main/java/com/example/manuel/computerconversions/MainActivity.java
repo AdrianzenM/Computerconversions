@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity{
         output = (TextView) findViewById(R.id.OUTPUT);
         hexcon = (Button) findViewById(R.id.hex);
         button = (Button) findViewById(R.id.button);
+   //     TextView display = (TextView) findViewById(R.id.displayError);
 
         button.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -62,14 +63,24 @@ public class MainActivity extends AppCompatActivity{
         }
     }
     public void HEX2Binary(View v){
-        if(input.getText().toString().isEmpty()){
-            return;
-        } else {
+        TextView display = (TextView)findViewById(R.id.displayError);
+
+        try{
+            String userInput = input.getText().toString();
             HEX2Binary bin = new HEX2Binary();
-            String binString = bin.hexConvertor(input.getText().toString());
-       //     binString = binString.substring(0,binString.indexOf('.'));
+            String binString = bin.hexConvertor(userInput);
+            //     binString = binString.substring(0,binString.indexOf('.'));
             MainActivity.output.setText(binString);
         }
+        catch( NumberFormatException e) {
+            display.setText("Invalid numerical input.");
+        }
+        catch( Exception e){
+            display.setText("ERROR.");
+        }
+
+
+
     }
 
 
